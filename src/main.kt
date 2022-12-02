@@ -1,5 +1,7 @@
-import day1.DayOne
+import day1.Day1
+import day2.Day2
 
 fun main() {
-    DayOne.execute()
+    Day1.execute()
+    Day2.execute()
 }

@@ -1,14 +1,26 @@
 package day1
 
-import readInputAsInt
 import utils.Day
 import java.util.Collections
 import java.util.PriorityQueue
 
-object DayOne : Day<Int, List<Int?>>(
+/**
+ * Actual answers after submitting;
+ * part1: 70296
+ * part2: 205381
+ */
+object Day1 : Day<Int, List<Int?>>(
     testPart1Result = 24000,
     testPart2Result = 45000
 ) {
+
+    override fun part1Answer(input: List<Int?>): Int {
+        return getMaxCalories(input, 1)
+    }
+
+    override fun part2Answer(input: List<Int?>): Int {
+        return getMaxCalories(input, 3)
+    }
 
     private fun getMaxCalories(input: List<Int?>, count: Int): Int {
         var elfLoad = 0
@@ -32,19 +44,7 @@ object DayOne : Day<Int, List<Int?>>(
         return total
     }
 
-    override fun getTestInput(): List<Int?> {
-        return readInputAsInt("day1/Day01_test")
-    }
-
-    override fun getActualInput(): List<Int?> {
-        return readInputAsInt("day1/Day01")
-    }
-
-    override fun part1Answer(input: List<Int?>): Int {
-        return getMaxCalories(input, 1)
-    }
-
-    override fun part2Answer(input: List<Int?>): Int {
-        return getMaxCalories(input, 3)
+    override fun modifyInput(input: List<String>): List<Int?> {
+        return input.map { it.toIntOrNull() }
     }
 }
