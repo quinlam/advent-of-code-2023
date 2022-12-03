@@ -10,6 +10,11 @@ If you're stuck with Kotlin-specific questions or anything related to this templ
 - [Kotlin Slack][slack]
 - Template [issue tracker][issues]
 
+## Goals
+
+My goal for this advent of code is to write readable and non-brute force code, but not necessarily highly optimized. I would favor readability and maintainability
+over optimization. I am also looking to favor functional operations for the solutions.
+
 
 [^aoc]:
     [Advent of Code][aoc] – An annual event of Christmas-oriented programming challenges started December 2015.
