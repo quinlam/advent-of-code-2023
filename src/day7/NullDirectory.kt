@@ -1,6 +1,6 @@
 package day7
 
-class NullDirectory : Directory("null") {
+class NullDirectory : Directory("") {
     override fun addFile(file: Int) {
         throw RuntimeException("Can not add to a null directory")
     }

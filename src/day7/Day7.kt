@@ -29,38 +29,6 @@ object Day7 : Day<Int, List<Directory>>(
             .getSize()
     }
 
-    private fun createNewDirectory(
-        name: String,
-        currentDirectory: Directory
-    ): Directory {
-        if (name == "/") {
-            return RootDirectory(name)
-        }
-
-        return ChildDirectory(name, currentDirectory)
-    }
-
-    private fun determineAction(input: String): CommandAction {
-        return when {
-            input.startsWith("$ cd ..") -> {
-                CommandAction.EXIT_DIRECTORY
-            }
-            input.startsWith("$ cd") -> {
-                CommandAction.ENTER_DIRECTORY
-            }
-            input.startsWith("dir") -> {
-                CommandAction.DIRECTORY_LISTING
-            }
-            input.startsWith("$ ls") -> {
-                CommandAction.LIST
-            }
-            input[0].isDigit() -> {
-                CommandAction.FILE_LISTING
-            }
-            else -> throw RuntimeException("Command not understood")
-        }
-    }
-
     override fun modifyInput(input: List<String>): List<Directory> {
         var currentDirectory: Directory = NullDirectory()
         val directoryMap = mutableListOf<Directory>()
@@ -83,5 +51,38 @@ object Day7 : Day<Int, List<Directory>>(
             }
         }
         return directoryMap
+    }
+
+    private fun createNewDirectory(
+        name: String,
+        currentDirectory: Directory
+    ): Directory {
+        if (name == "/") {
+            return RootDirectory(name)
+        }
+
+        val childName = "${currentDirectory.name}$name/"
+        return ChildDirectory(childName, currentDirectory)
+    }
+
+    private fun determineAction(input: String): CommandAction {
+        return when {
+            input.startsWith("$ cd ..") -> {
+                CommandAction.EXIT_DIRECTORY
+            }
+            input.startsWith("$ cd") -> {
+                CommandAction.ENTER_DIRECTORY
+            }
+            input.startsWith("dir") -> {
+                CommandAction.DIRECTORY_LISTING
+            }
+            input.startsWith("$ ls") -> {
+                CommandAction.LIST
+            }
+            input[0].isDigit() -> {
+                CommandAction.FILE_LISTING
+            }
+            else -> throw RuntimeException("Command not understood")
+        }
     }
 }
