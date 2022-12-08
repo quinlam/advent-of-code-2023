@@ -8,7 +8,7 @@ import java.lang.RuntimeException
  * part1: 1892
  * part2: 2313
  */
-object Day6 : Day<Int, CharArray>(
+class Day6 : Day<Int, CharArray>(
     testPart1Result = 11,
     testPart2Result = 26
 ) {

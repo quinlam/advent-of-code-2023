@@ -8,7 +8,7 @@ import java.util.Stack
  * part1: QGTHFZBHV
  * part2: MGDMPSZTM
  */
-object Day5 : Day<String, StackInput>(
+class Day5 : Day<String, StackInput>(
     testPart1Result = "CMZ",
     testPart2Result = "MCD"
 ) {

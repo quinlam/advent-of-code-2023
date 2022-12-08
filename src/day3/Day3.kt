@@ -7,7 +7,7 @@ import utils.Day
  * part1: 7845
  * part2: 2790
  */
-object Day3 : Day<Int, List<String>>(
+class Day3 : Day<Int, List<String>>(
     testPart1Result = 157,
     testPart2Result = 70
 ) {

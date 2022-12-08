@@ -8,7 +8,7 @@ import kotlin.RuntimeException
  * part1: 2031851
  * part2: 2568781
  */
-object Day7 : Day<Int, List<Directory>>(
+class Day7 : Day<Int, List<Directory>>(
     testPart1Result = 95437,
     testPart2Result = 24933642
 ) {

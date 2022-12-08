@@ -8,7 +8,7 @@ import java.lang.RuntimeException
  * part1: 8890
  * part2: 10238
  */
-object Day2 : Day<Int, List<String>>(
+class Day2 : Day<Int, List<String>>(
     testPart1Result = 15,
     testPart2Result = 12
 ) {

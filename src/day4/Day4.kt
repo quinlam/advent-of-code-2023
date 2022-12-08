@@ -7,7 +7,7 @@ import utils.Day
  * part1: 644
  * part2: 926
  */
-object Day4 : Day<Int, List<CampRanges>>(
+class Day4 : Day<Int, List<CampRanges>>(
     testPart1Result = 2,
     testPart2Result = 4
 ) {

@@ -1,0 +1,20 @@
+package day{day}
+
+import utils.Day
+
+class Day{day} : Day<Int, List<String>>(
+    testPart1Result = 0,
+    testPart2Result = 0,
+) {
+    override fun part1Answer(input: List<String>): Int {
+        return 0
+    }
+
+    override fun part2Answer(input: List<String>): Int {
+        return 0
+    }
+
+    override fun modifyInput(input: List<String>): List<String> {
+        return input
+    }
+}

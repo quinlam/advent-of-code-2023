@@ -9,7 +9,7 @@ import java.util.PriorityQueue
  * part1: 70296
  * part2: 205381
  */
-object Day1 : Day<Int, List<Int?>>(
+class Day1 : Day<Int, List<Int?>>(
     testPart1Result = 24000,
     testPart2Result = 45000
 ) {

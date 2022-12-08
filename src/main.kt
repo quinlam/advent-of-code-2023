@@ -1,17 +1,17 @@
-import day1.Day1
-import day2.Day2
-import day3.Day3
-import day4.Day4
-import day5.Day5
-import day6.Day6
-import day7.Day7
+import org.reflections.Reflections
+import utils.Day
 
 fun main() {
-    Day1.execute()
-    Day2.execute()
-    Day3.execute()
-    Day4.execute()
-    Day5.execute()
-    Day6.execute()
-    Day7.execute()
+
+    // Set this value to run for a single day, e.g. "Day7"
+    val runOnlyTest: String? = null
+
+    Reflections()
+        .getSubTypesOf(Day::class.java)
+        .sortedBy { it.simpleName }
+        .filter { runOnlyTest == null || it.simpleName == runOnlyTest }
+        .map { it.newInstance() }
+        .forEach {
+            it.execute()
+        }
 }
