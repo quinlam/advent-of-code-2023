@@ -4,12 +4,13 @@ import utils.Day
 fun main() {
 
     // Set this value to run for a single day, e.g. "Day7"
-    val runOnlyTest: String? = null
+//    val classMatcher = Regex("Day\\d*")
+    val classMatcher = Regex("Day8")
 
     Reflections()
         .getSubTypesOf(Day::class.java)
         .sortedBy { it.simpleName }
-        .filter { runOnlyTest == null || it.simpleName == runOnlyTest }
+        .filter { classMatcher.matches(it.simpleName) }
         .map { it.newInstance() }
         .forEach {
             it.execute()

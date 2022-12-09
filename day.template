@@ -2,6 +2,11 @@ package day{day}
 
 import utils.Day
 
+/**
+ * Actual answers after submitting;
+ * part1:
+ * part2:
+ */
 class Day{day} : Day<Int, List<String>>(
     testPart1Result = 0,
     testPart2Result = 0,
