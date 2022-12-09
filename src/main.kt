@@ -5,7 +5,7 @@ fun main() {
 
     // Set this value to run for a single day, e.g. "Day7"
 //    val classMatcher = Regex("Day\\d*")
-    val classMatcher = Regex("Day8")
+    val classMatcher = Regex("Day9")
 
     Reflections()
         .getSubTypesOf(Day::class.java)
