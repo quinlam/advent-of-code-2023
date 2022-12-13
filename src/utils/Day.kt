@@ -37,7 +37,7 @@ abstract class Day<S, T>(
         check(part1 == testPart1Result)
         val part2 = part2Answer(input2)
         check(part2 == testPart2Result)
-        println("TESTS VALIDATED")
+        println("ALL TESTS VALIDATED")
     }
 
     private fun actual(input1: T, input2: T) {
