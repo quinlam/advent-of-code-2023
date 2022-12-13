@@ -1,4 +1,4 @@
-package day8
+package utils
 
 enum class ArrayMovement(
     val horizontal: Int,
